@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'house/index'
-  get 'house/show'
-  get 'house/new'
-  get 'house/edit'
+  resources :houses
+
 end
