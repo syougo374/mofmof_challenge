@@ -1,2 +1,6 @@
-<h1>Houses#edit</h1>
-<p>Find me in app/views/houses/edit.html.erb</p>
+<h1>物件編集</h1>
+<% render 'form' %>
+<%= link_to '詳細', houses_path, method: :post %>
+<%= link_to '戻る', houses_path %>
+
+

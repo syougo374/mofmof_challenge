@@ -3,7 +3,7 @@ module HousesHelper
     if action_name == 'new' 
       houses_path
     elsif action_name == 'edit'
-      edit_house_path
+      house_path
     end
   end
 end
