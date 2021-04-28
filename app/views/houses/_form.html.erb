@@ -1,32 +1,43 @@
-<%= form_with(model: @house, local: true, url: choose_new_or_edit ) do |houses| %>
+<%= form_with(model: @house, local: true) do |form| %>
   <div class="input_field">
-    <%= houses.label :物件名 %>
+    <%= form.label :物件名 %>
     <br>
-    <p><%= houses.text_field :property_name %></p>
+    <p><%= form.text_field :property_name %></p>
     <br>
-    <%= houses.label :賃料 %>
+    <%= form.label :賃料 %>
     <br>
-    <p><%= houses.text_field :price %>円</p>
+    <p><%= form.text_field :price %>円</p>
     <br>
-    <%= houses.label :住所 %>
+    <%= form.label :住所 %>
     <br>
-    <p><%= houses.text_field :street_address %></p>
+    <p><%= form.text_field :street_address %></p>
     <br>
-    <%= houses.label :築年数 %>
+    <%= form.label :築年数 %>
     <br>
-    <p><%= houses.text_field :age_building %>年</p>
+    <p><%= form.text_field :age_building %>年</p>
     <br>
-    <%= houses.label :備考 %>
+    <%= form.label :備考 %>
     <br>
-    <p><%= houses.text_area :remarks %></p>    
+    <p><%= form.text_area :remarks %></p>    
     <br>
     <hr class="style2">
-  <%= houses.submit '登録する', class: 'button' %>
   </div>
 
-
-
-
-
-  
+  <% @num = 1 %>
+  <%= form.fields_for :stations do |s| %>
+    <h3>最寄り駅<%= @num %></h3> 
+    <%= s.label :路線名 %>
+    <br>
+    <%= s.text_field :route_name %>
+    <br>
+    <%= s.label :路名 %>
+    <br>
+    <%= s.text_field :station_name %>
+    <br>
+    <%= s.label :徒歩分数 %>
+    <br>
+    <p><%= s.text_field :minutes_on_foot %>分</p>
+    <% @num += 1 %>
+  <% end %>
+  <%= form.submit '登録する', class: 'button' %>
 <% end %>

@@ -14,9 +14,9 @@ ActiveRecord::Schema.define(version: 2021_04_26_131358) do
 
   create_table "houses", force: :cascade do |t|
     t.string "property_name"
-    t.integer "price"
+    t.string "price"
     t.string "street_address"
-    t.integer "age_building"
+    t.string "age_building"
     t.text "remarks"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2021_04_26_131358) do
   create_table "stations", force: :cascade do |t|
     t.string "route_name"
     t.string "station_name"
-    t.time "minutes_on_foot"
+    t.string "minutes_on_foot"
     t.integer "house_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
