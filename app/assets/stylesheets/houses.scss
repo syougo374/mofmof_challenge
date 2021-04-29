@@ -1,0 +1,29 @@
+// Place all the styles related to the houses controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.input_field p {
+  margin: 0;
+}
+hr.style2 {
+	border-top: 3px double #8c8b8b;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 10px;
+}
+.remarks {
+  width: 800px;
+}
+.age_building {
+  width: 100px;
+}
+
+td a {
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  text-decoration:10px;
+  border-bottom: 1px solid #333;
+  color: black ;
+}
