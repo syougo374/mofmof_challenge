@@ -15,7 +15,6 @@
         <td><%= houses.street_address %></td>
         <td><%= houses.age_building %></td>
         <td><%= houses.remarks %></td>
-        <td><%= link_to '詳細', house_path(houses.id) %></td>
         <td><%= link_to '編集', edit_house_path(houses.id) %></td>
         <td><%= link_to '削除', house_path(houses.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
