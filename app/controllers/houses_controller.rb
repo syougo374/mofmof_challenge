@@ -16,6 +16,8 @@ class HousesController < ApplicationController
     # else
       if @house.save
         redirect_to houses_path,notice: "物件を登録しました"
+
+        
       else
         render :new
       end
